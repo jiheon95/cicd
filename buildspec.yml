@@ -10,7 +10,7 @@ phases:
   build:
     commands:
       - echo "Running tests"
-      - uvicorn app:app --reload --host 0.0.0.0 --port 8000
+      - pytest tests/
   post_build:
     commands:
       - echo "Build completed on `date`"
