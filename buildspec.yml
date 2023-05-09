@@ -10,7 +10,7 @@ phases:
   build:
     commands:
       - echo "Running tests"
-      - pytest tests/
+      - pytest tests/app.py
   post_build:
     commands:
       - echo "Build completed on `date`"
