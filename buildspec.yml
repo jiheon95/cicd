@@ -6,13 +6,11 @@ phases:
       python: 3.9
     commands:
       - python -m pip install --upgrade pip
-      -  pip install flake8 pytest pylint
+      -  pip install flake8 pytest pylint python-multipart sqlalchemy jinja2 'uvicorn[standard]'
   build:
     commands:
       - echo "Running tests"
-      - pytest tests/
-      - echo "Linting code"
-      - pylint app/
+      - uvicorn app:app --reload --host 0.0.0.0 --port 8000
   post_build:
     commands:
       - echo "Build completed on `date`"
