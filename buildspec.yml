@@ -6,11 +6,11 @@ phases:
       python: 3.9
     commands:
       - python -m pip install --upgrade pip
-      -  pip install flake8 pytest pylint python-multipart sqlalchemy jinja2 'uvicorn[standard]'
+      -  pip install pytest
   build:
     commands:
       - echo "Running tests"
-      - pytest tests/app.py
+      - pytest tests/
   post_build:
     commands:
       - echo "Build completed on `date`"
