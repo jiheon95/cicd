@@ -5,7 +5,8 @@ phases:
     runtime-versions:
       python: 3.9
     commands:
-      - pip install -r requirements.txt
+      - python -m pip install --upgrade pip
+      -  pip install flake8 pytest pylint
   build:
     commands:
       - echo "Running tests"
